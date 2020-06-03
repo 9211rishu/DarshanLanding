@@ -1,0 +1,5 @@
+@media (min-width: 1280px) {
+  #cta .container {
+    max-width: 980px;
+  }
+}
