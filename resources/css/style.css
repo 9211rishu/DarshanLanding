@@ -3,3 +3,9 @@
     max-width: 980px;
   }
 }
+.logo {
+  max-width: 50%;
+}
+*:focus {
+  border: none !important;
+}
