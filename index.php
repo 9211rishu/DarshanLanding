@@ -66,10 +66,28 @@
     </section>
     <section class="text-gray-700 body-font focus:outline-none" id="about">
       <div class="container px-5 py-24 mx-auto flex flex-col">
-        <div class="lg:w-4/6 mx-auto">
-          <div class="rounded-lg h-64 overflow-hidden">
-            <img alt="content" class="object-cover object-center h-full w-full" src="resources/img/banner.jpg" />
+      <!-- <div class="rounded-lg h-64 overflow-hidden">
+          <img alt="content" class="object-cover object-center h-full w-full" src="resources/img/banner.jpg" />
+        </div> -->
+        <div class="carousel"
+          data-flickity='{ "wrapAround": true ,"autoPlay": true, "imagesLoaded": true, "lazyLoad":true}'>
+          <div class="carousel-cell">
+            <img src="resources/img/banner-01.jpg" alt="banner 01">
           </div>
+          <div class="carousel-cell">
+            <img src="resources/img/banner-02.jpg" alt="banner 02">
+          </div>
+          <div class="carousel-cell">
+            <img src="resources/img/banner-03.jpg" alt="banner 03">
+          </div>
+          <div class="carousel-cell">
+            <img src="resources/img/banner-04.jpg" alt="banner 04">
+          </div>
+          <div class="carousel-cell">
+            <img src="resources/img/banner-05.jpg" alt="banner 05">
+          </div>
+        </div>
+        <div class="lg:w-4/6 mx-auto">
           <div class="flex flex-col sm:flex-row mt-10">
             <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
               <div class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
@@ -189,7 +207,7 @@
                 echo $videos_count;
               ?>
               </h2>
-              <p class="leading-relaxed">Projects</p>
+              <p class="leading-relaxed">Videos</p>
             </div>
           </div>
         </div>
@@ -328,6 +346,7 @@
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="resources/js/flickity.pkgd.min.js"></script>
     <script src="resources/js/script.js"></script>
   </body>
 </html>
