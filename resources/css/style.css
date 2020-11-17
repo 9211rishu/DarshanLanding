@@ -9,11 +9,20 @@ https://flickity.metafizzy.co
     max-width: 980px;
   }
 }
+.logo-box{
+  justify-content: center;
+}
 .logo {
   max-width: 50%;
 }
 .carousel-cell {
   width: 80%; /* full width */
-  height: 250px; /* height of carousel */
+  height: auto; /* height of carousel */
   margin-right: 10px;
+}
+.error{
+  color: #A52100;
+}
+.success{
+  color:#4BB543;
 }

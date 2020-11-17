@@ -20,7 +20,7 @@
   <body>
     <header class="text-gray-700 body-font focus:outline-none">
       <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="./">
+        <a class="logo-box flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="./">
           <img class="logo" src="resources/img/logo200x200.png" />
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
@@ -44,7 +44,7 @@
         <div class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
           <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">
             Darshan Singh Sur <br class="hidden lg:inline-block" />
-            Violinist, Composer, Song Writer
+            Violinist, Composer, Instructor
           </h1>
           <p class="mb-8 leading-relaxed">
             A violinist who got the touch of perfection in fusion and in Indian Classical Instrumental Music as well. On the way of massive performances towards classical and fusion one after the other.
@@ -110,7 +110,7 @@
             <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-300 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
               <p class="leading-relaxed text-lg mb-4">
                 Darshan Singh Sur is one of those prominent musician of India who got no family aspects from shades of musical background. Darshan Singh Sur's mysterious journey of music got evoked from his break through out of the passion
-                to which he observed after his graduation at the age of 22. Only after his real time aproval of passion and tendency to achieve success through of his hardships. He has wiped of ample of solo replicas in most of all major
+                to which he observed after his graduation at the age of 22. Only after his real time approval of passion and tendency to achieve success through of his hardships. He has wiped of ample of solo replicas in most of all major
                 cities of India and captivated his magic in many other countries as well on a long running span of time from now. He is not so far from the tagline of a maestro of strings now. for what he will be known as soon as in every
                 corner of the world. His adorable nature towards livings and eternal aspects of life makes him much more prominent with his on going carrier towards music.
               </p>
@@ -156,11 +156,8 @@
           </h1>
         </div>
         <?php
-          // Calling api form youtube
           $youtube_subscribers = file_get_contents('https://www.googleapis.com/youtube/v3/channels?part=statistics&id=UCOUV5tSpM1YaETUer4EG2fQ&key=AIzaSyBeSrs7CYtIIbAqvdoyZphZ7hi7hstBZ8A');
-          // Decoding json youtube api response
           $youtube_api_response = json_decode($youtube_subscribers, true );
-          // get count of youtube subscribers.
           $subscribers_count = intval($youtube_api_response['items'][0]['statistics']['subscriberCount']);
           $views_count = intval($youtube_api_response['items'][0]['statistics']['viewCount']);
           $videos_count = intval($youtube_api_response['items'][0]['statistics']['videoCount']);
@@ -198,9 +195,8 @@
           </div>
           <div class="p-4 md:w-1/3 sm:w-full w-full">
             <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-purple-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 24 24">
-                <path d="M3 18v-6a9 9 0 0118 0v6"></path>
-                <path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"></path>
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="text-purple-500 w-12 h-12 mb-3 inline-block" viewBox="0 0 32 32">
+                <path d="M18.565 15.733l-3.594-1.677c-0.314-0.146-0.571 0.018-0.571 0.365v3.158c0 0.347 0.258 0.51 0.571 0.365l3.592-1.677c0.315-0.147 0.315-0.387 0.002-0.534zM16 0.64c-8.483 0-15.36 6.877-15.36 15.36s6.877 15.36 15.36 15.36 15.36-6.877 15.36-15.36-6.877-15.36-15.36-15.36zM16 22.24c-7.862 0-8-0.709-8-6.24s0.138-6.24 8-6.24 8 0.709 8 6.24-0.138 6.24-8 6.24z"></path>
               </svg>
               <h2 class="title-font font-medium text-3xl text-gray-900">
               <?php
@@ -216,45 +212,22 @@
     <hr />
     <section class="text-gray-700 body-font focus:outline-none" id="testimonials">
       <div class="container px-5 py-24 mx-auto">
-        <div class="flex flex-wrap -m-4">
-          <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div class="h-full text-center">
-              <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="resources/img/bohemia.png" />
-              <p class="leading-relaxed">
-                Most humbled and experienced musician to work with.
-              </p>
-              <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-                BOHEMIA
-              </h2>
-              <p class="text-gray-500">Rapper</p>
-            </div>
+        <div class="carousel"
+          data-flickity='{ "wrapAround": true ,"autoPlay": true, "imagesLoaded": true, "lazyLoad":true}'>
+          <div class="carousel-cell">
+            <img src="resources/img/t1.jpg" alt="banner 01">
           </div>
-          <div class="lg:w-1/3 lg:mb-0 mb-6 p-4">
-            <div class="h-full text-center">
-              <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="resources/img/karan.png" />
-              <p class="leading-relaxed">
-                An expert in his field. It was amazing working with him.
-              </p>
-              <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-                KARAN WAHI
-              </h2>
-              <p class="text-gray-500">Model/Actor</p>
-            </div>
+          <div class="carousel-cell">
+            <img src="resources/img/t2.jpg" alt="banner 02">
           </div>
-          <div class="lg:w-1/3 lg:mb-0 p-4">
-            <div class="h-full text-center">
-              <img alt="testimonial" class="w-20 h-20 mb-8 object-cover object-center rounded-full inline-block border-2 border-gray-200 bg-gray-100" src="resources/img/bhuvan.png" />
-              <p class="leading-relaxed">
-                Brilliant. The way he plays violin is amazing.
-              </p>
-              <span class="inline-block h-1 w-10 rounded bg-purple-500 mt-6 mb-4"></span>
-              <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">
-                BHUVAN BAM
-              </h2>
-              <p class="text-gray-500">YouTuber</p>
-            </div>
+          <div class="carousel-cell">
+            <img src="resources/img/t3.jpg" alt="banner 03">
+          </div>
+          <div class="carousel-cell">
+            <img src="resources/img/t4.jpg" alt="banner 04">
+          </div>
+          <div class="carousel-cell">
+            <img src="resources/img/t5.jpg" alt="banner 05">
           </div>
         </div>
       </div>
@@ -267,22 +240,95 @@
             Contact Us
           </h1>
         </div>
-        <form method="POST" data-netlify="true">
+        <?php
+          $nameErr = $emailErr = $phoneErr = $messageErr = NULL;
+          $name = $email = $phone = $message = "";
+          if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            if (empty($_POST["name"])) {
+              $nameErr = "Name is required";
+            } else {
+              $name = test_input($_POST["name"]);
+              if (!preg_match("/^[a-zA-Z-' ]*$/",$name)) {
+                $nameErr = "Only letters and white space allowed";
+              }
+            }
+            if (empty($_POST["email"])) {
+              $emailErr = "Email is required";
+            } else {
+              $email = test_input($_POST["email"]);
+              if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                $emailErr = "Please check your email";
+              }
+            }
+            if (empty($_POST["phone"])) {
+              $phoneErr = "Phone number is required";
+            } else {
+              $phone = test_input($_POST["phone"]);
+              if (!preg_match("/^[0-9]{10}+$/",$phone)) {
+                $phoneErr = "Please enter 10 digit valid phone number";
+              }
+            }
+            if (empty($_POST["message"])) {
+              $messageErr = "Message is required";
+            } else {
+              $message = test_input($_POST["message"]);
+            }
+          }
+          function test_input($data) {
+            $data = trim($data);
+            $data = stripslashes($data);
+            $data = htmlspecialchars($data);
+            return $data;
+          }
+        ?>
+        <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>#contact">
           <div class="lg:w-1/2 md:w-2/3 mx-auto">
             <div class="flex flex-wrap -m-2">
-              <div class="p-2 w-1/2">
-                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-purple-500 text-base px-4 py-2" placeholder="Name" type="text" />
+              <div class="p-2 w-1/3">
+                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-purple-500 text-base px-4 py-2" placeholder="Name" type="text" name="name" id="name" value="<?php echo $name; ?>"/>
+                <p class="error"> <?php echo $nameErr ?> </p>
               </div>
-              <div class="p-2 w-1/2">
-                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-purple-500 text-base px-4 py-2" placeholder="Email" type="email" />
+              <div class="p-2 w-1/3">
+                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-purple-500 text-base px-4 py-2" placeholder="Email" type="email" name="email" id="email" value="<?php echo $email; ?>"/>
+                <p class="error"> <?php echo $emailErr ?> </p>
+              </div>
+              <div class="p-2 w-1/3">
+                <input class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none focus:border-purple-500 text-base px-4 py-2" placeholder="Phone No." type="tel" name="phone" id="phone" value="<?php echo $phone; ?>"/>
+                <p class="error"> <?php echo $phoneErr ?> </p>
               </div>
               <div class="p-2 w-full">
-                <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-purple-500 text-base px-4 py-2 resize-none block" placeholder="Message"></textarea>
+                <textarea class="w-full bg-gray-100 rounded border border-gray-400 focus:outline-none h-48 focus:border-purple-500 text-base px-4 py-2 resize-none block" placeholder="Message" name="message" id="message"><?php echo $message; ?></textarea>
+                <p class="error"> <?php echo $messageErr ?> </p>
               </div>
               <div class="p-2 w-full">
-                <button class="flex mx-auto text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
+                <button type="submit" name="submit" class="flex mx-auto text-white bg-purple-500 border-0 py-2 px-8 focus:outline-none hover:bg-purple-600 rounded text-lg">
                   Send
                 </button>
+                <?php 
+                  if(isset($_POST['submit'])){
+                    $name = $_POST['name'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    $message = $_POST['message'];
+                    
+                    $to = "darshan.violin@gmail.com";
+                    $headers = "From: Admin";
+                    $subject = "Response From Darshan G Violinist";
+                    $message = "New query from ".$name.". \n His phone number is ".$phone.", email is ".$email.", and message is ".$message.".";
+                    if(empty($name) or empty($email) or empty($phone) or empty($message)){
+                      echo "<p class='text-center error'>* Fill the required details!</p>";
+                    }elseif(isset($nameErr) or isset($phoneErr) or isset($pinErr) or isset($messageErr)){
+                      echo "<p class='text-center error'>* Please check your entries!</p>";
+                      $nameErr = $phoneErr = $pinErr = $messageErr = NULL;
+                    }else{
+                      if(mail($to, $subject, $message, $headers)){
+                        echo "<p class='text-center text-light success'>* Thankyou for your enquiry. We will get in touch as soon as possible!</p> <?php";
+                      }else{
+                        echo "<p class='text-center text-light error'>* Something went wrong. Please Mail Us!</p>";
+                      }
+                    }
+                  }
+                ?>
               </div>
               <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
                 <a href="mailto:darshan.violin@gmail.com" class="text-purple-500">darshan.violin@gmail.com</a>
